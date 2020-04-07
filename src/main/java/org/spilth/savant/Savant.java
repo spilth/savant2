@@ -22,7 +22,7 @@ public class Savant {
             jCommander.usage();
         } else {
             if (jCommander.getParsedCommand().equals("init")) {
-                InitializeService initializeService = new InitializeService(initializeCommand);
+                new InitializeService(initializeCommand);
             }
         }
     }

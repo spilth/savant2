@@ -8,12 +8,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
+import static java.lang.String.join;
+
 public class InitializeService {
     public InitializeService(InitializeCommand command) {
         String projectPath = "./" + command.artifactId;
         String pomPath = projectPath + "/pom.xml";
         String[] packageDirectories = command.groupId.split("\\.");
-        String packagePath = String.format("%s/%s", String.join("/", packageDirectories), command.artifactId);
+        String packagePath = String.format("%s/%s", join("/", packageDirectories), command.artifactId);
         String mainPath = projectPath + "/src/main/java/" + packagePath;
         String testPath = projectPath + "/src/test/java/" + packagePath;
         String resourcesPath = projectPath + "/src/main/resources";
