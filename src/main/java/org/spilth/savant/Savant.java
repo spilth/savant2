@@ -5,11 +5,14 @@ import com.beust.jcommander.ParameterException;
 
 public class Savant {
     public static void main(String[] args) {
-        JCommander jCommander = new JCommander();
-        jCommander.setProgramName("savant");
-
+        CommandMain commandMain = new CommandMain();
         InitializeCommand initializeCommand = new InitializeCommand();
-        jCommander.addCommand(initializeCommand);
+
+        JCommander jCommander = JCommander.newBuilder()
+                .programName("savant")
+                .addObject(commandMain)
+                .addCommand("init", initializeCommand)
+                .build();
 
         try {
             jCommander.parse(args);
