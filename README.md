@@ -1,4 +1,4 @@
-# Savant
+# Savant ![Build](https://github.com/spilth/savant2/workflows/Build/badge.svg)
 
 A Maven companion tool.
 
