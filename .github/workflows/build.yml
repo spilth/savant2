@@ -12,8 +12,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: ./mvnw -B package --file pom.xml
-    - uses: codecov/codecov-action@v1
+      run: ./mvnw -B package
+    - name: Upload to CodeCov
+      uses: codecov/codecov-action@v1
       with:
         file: target/site/jacoco/jacoco.xml
         fail_ci_if_error: true
