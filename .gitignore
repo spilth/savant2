@@ -1,4 +1,5 @@
-.idea
+.idea/
 *.iml
-target
-temp
+target/
+dependency-reduced-pom.xml
+.mvn/wrapper/maven-wrapper.jar
