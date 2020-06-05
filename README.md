@@ -4,10 +4,17 @@ A Maven companion tool.
 
 ## Getting Started
 
+To checkout the project and build it:
+
 ```bash
 $ git clone git@github.com:spilth/savant2.git
 $ cd savant2
-$ ./mvnw package
+$ ./mvnw
+```
+
+To test Savant while working on it, you can use an alias:
+
+```bash
 $ alias savant="java -jar ./target/savant-2.0.0-SNAPSHOT.jar"
 ```
 
